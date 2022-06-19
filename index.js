@@ -1,9 +1,20 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const storageUnit = new Set();
+  for(const item of array){
+    const targetNumber = target - item;
+
+      if(storageUnit.has(targetNumber)) return true;
+
+      storageUnit.add(item)
+  }
+
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  0(1) and 0(n)
 */
 
 /* 
